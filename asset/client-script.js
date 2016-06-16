@@ -16,6 +16,7 @@
     return source.close.bind(source);
   }
 
+  // 监听/eventstream发送的消息，然后刷新浏览器
   subscribe('/eventstream', function(data) {
     if (data && /reload/.test(data)) {
       window.location.reload();
